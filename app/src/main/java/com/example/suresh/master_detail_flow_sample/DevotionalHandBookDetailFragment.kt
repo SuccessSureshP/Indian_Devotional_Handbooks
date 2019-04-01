@@ -17,14 +17,14 @@ import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 
 /**
  * A fragment representing a single Website detail screen.
- * This fragment is either contained in a [WebsiteListActivity]
- * in two-pane mode (on tablets) or a [WebsiteDetailActivity]
+ * This fragment is either contained in a [DevotionalHandBooksListActivity]
+ * in two-pane mode (on tablets) or a [DevotionalHandBookDetailActivity]
  * on handsets.
  */
-class WebsiteDetailFragment : Fragment(), OnPageChangeListener, OnLoadCompleteListener,
+class DevotionalHandBookDetailFragment : Fragment(), OnPageChangeListener, OnLoadCompleteListener,
 OnPageErrorListener  {
 
-    private val TAG = WebsiteDetailFragment::class.java!!.simpleName
+    private val TAG = DevotionalHandBookDetailFragment::class.java!!.simpleName
 
     override fun onPageChanged(page: Int, pageCount: Int) {
         pageNumber = page

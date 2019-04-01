@@ -10,7 +10,7 @@
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
     android:showDividers="middle"
-    tools:context=".WebsiteListActivity">
+    tools:context=".DevotionalHandBooksListActivity">
 
     <!--
     This layout is a two-pane layout for the Websites
@@ -27,7 +27,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context="com.example.suresh.master_detail_flow_sample.WebsiteListActivity"
+        tools:context="com.example.suresh.master_detail_flow_sample.DevotionalHandBooksListActivity"
         tools:listitem="@layout/website_list_content" />
 
     <FrameLayout

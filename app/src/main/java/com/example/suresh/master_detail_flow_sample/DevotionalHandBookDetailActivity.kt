@@ -2,7 +2,6 @@ package com.example.suresh.master_detail_flow_sample
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.app.NavUtils
 import android.view.MenuItem
@@ -12,9 +11,9 @@ import kotlinx.android.synthetic.main.activity_website_detail.*
  * An activity representing a single Website detail screen. This
  * activity is only used on narrow width devices. On tablet-size devices,
  * item bookFileName are presented side-by-side with a list of items
- * in a [WebsiteListActivity].
+ * in a [DevotionalHandBooksListActivity].
  */
-class WebsiteDetailActivity : AppCompatActivity() {
+class DevotionalHandBookDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +36,10 @@ class WebsiteDetailActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
-            val fragment = WebsiteDetailFragment().apply {
+            val fragment = DevotionalHandBookDetailFragment().apply {
                 arguments = Bundle().apply {
-                    putString(WebsiteDetailFragment.ARG_ITEM_ID,
-                            intent.getStringExtra(WebsiteDetailFragment.ARG_ITEM_ID))
+                    putString(DevotionalHandBookDetailFragment.ARG_ITEM_ID,
+                            intent.getStringExtra(DevotionalHandBookDetailFragment.ARG_ITEM_ID))
                 }
             }
 
@@ -60,7 +59,7 @@ class WebsiteDetailActivity : AppCompatActivity() {
                     //
                     // http://developer.android.com/design/patterns/navigation.html#up-vs-back
 
-                    NavUtils.navigateUpTo(this, Intent(this, WebsiteListActivity::class.java))
+                    NavUtils.navigateUpTo(this, Intent(this, DevotionalHandBooksListActivity::class.java))
                     true
                 }
                 else -> super.onOptionsItemSelected(item)

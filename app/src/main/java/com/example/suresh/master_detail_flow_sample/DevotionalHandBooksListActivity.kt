@@ -19,11 +19,11 @@ import kotlinx.android.synthetic.main.website_list.*
  * An activity representing a list of Pings. This activity
  * has different presentations for handset and tablet-size devices. On
  * handsets, the activity presents a list of items, which when touched,
- * lead to a [WebsiteDetailActivity] representing
+ * lead to a [DevotionalHandBookDetailActivity] representing
  * item bookFileName. On tablets, the activity presents the list of items and
  * item bookFileName side-by-side using two vertical panes.
  */
-class WebsiteListActivity : AppCompatActivity() {
+class DevotionalHandBooksListActivity : AppCompatActivity() {
 
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -58,7 +58,7 @@ class WebsiteListActivity : AppCompatActivity() {
         recyclerView.adapter = SimpleItemRecyclerViewAdapter(this, DevotionalContent.ITEMS, twoPane)
     }
 
-    class SimpleItemRecyclerViewAdapter(private val parentActivity: WebsiteListActivity,
+    class SimpleItemRecyclerViewAdapter(private val parentActivity: DevotionalHandBooksListActivity,
                                         private val values: List<DevotionalContent.HandBookItem>,
                                         private val twoPane: Boolean) :
             RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder>() {
@@ -69,9 +69,9 @@ class WebsiteListActivity : AppCompatActivity() {
             onClickListener = View.OnClickListener { v ->
                 val item = v.tag as DevotionalContent.HandBookItem
                 if (twoPane) {
-                    val fragment = WebsiteDetailFragment().apply {
+                    val fragment = DevotionalHandBookDetailFragment().apply {
                         arguments = Bundle().apply {
-                            putString(WebsiteDetailFragment.ARG_ITEM_ID, item.id)
+                            putString(DevotionalHandBookDetailFragment.ARG_ITEM_ID, item.id)
                         }
                     }
                     parentActivity.supportFragmentManager
@@ -79,8 +79,8 @@ class WebsiteListActivity : AppCompatActivity() {
                             .replace(R.id.website_detail_container, fragment)
                             .commit()
                 } else {
-                    val intent = Intent(v.context, WebsiteDetailActivity::class.java).apply {
-                        putExtra(WebsiteDetailFragment.ARG_ITEM_ID, item.id)
+                    val intent = Intent(v.context, DevotionalHandBookDetailActivity::class.java).apply {
+                        putExtra(DevotionalHandBookDetailFragment.ARG_ITEM_ID, item.id)
                     }
                     v.context.startActivity(intent)
                 }
