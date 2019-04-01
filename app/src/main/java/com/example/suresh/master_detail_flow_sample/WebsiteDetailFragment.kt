@@ -70,7 +70,7 @@ OnPageErrorListener  {
 //            rootView.website_detail.text = it.details
 //        }
 
-        rootView.pdfView.fromAsset(SAMPLE_FILE)
+        rootView.pdfView.fromAsset(item?.details)
             .defaultPage(pageNumber)
             .onPageChange(this)
             .enableAnnotationRendering(true)

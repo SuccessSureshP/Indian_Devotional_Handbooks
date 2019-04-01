@@ -29,16 +29,13 @@ object DummyContent {
 //            addItem(createDummyItem(i))
 //        }
 
-        addItem(DummyItem("1","DNA Team DNA TeamDNA TeamDNA TeamDNA TeamDNA TeamDNA TeamDNA TeamDNA Team","\nDIG Native mobile Apps(DNA)  team builds the Health Connect Android and IOS apps. \n\n\nTeam repositories: \n\n   Coming soon"))
-        addItem(DummyItem("2","FUEGO Team","\nFuego team builds the backend APIs which talks to EMR Systems like EPIC. Many teams uses those APIs. \n\n\nTeam repositories: \n\n   Coming soon"))
+        addItem(DummyItem("1","Adhyatmika_Darshini","Adhyatmika_Darshini.pdf"))
+        addItem(DummyItem("2","Adhyatmika_Darshini-2","Adhyatmika_Darshini-2.pdf"))
 
-        addItem(DummyItem("3","HIELO Team","\nHIELO team builds the backend APIs for communications platform: WebRTC SDK Mobile & Web. (Video backend) \n\n\nTeam repositories: \n\n   Coming soon"))
+        addItem(DummyItem("3","Adhyatmika_Darshini-3","Adhyatmika_Darshini.pdf"))
 
-        addItem(DummyItem("4","FESTIVUS Team","\nPatient facing web frontend. \n\n\nTeam repositories: \n\n   Coming soon"))
+        addItem(DummyItem("4","Adhyatmika_Darshini-4","Adhyatmika_Darshini-2.pdf"))
 
-        addItem(DummyItem("5","WATCHTOWER Team","\nProvider facing web frontend. \n\n\nTeam repositories: \n\n   Coming soon"))
-
-        addItem(DummyItem("6","QA Team","\nQA team does the Quality assurance and testing of the Mobile and Web apps. They also do the automation work. \n\n\nTeam repositories: \n\n   Coming soon"))
     }
 
     private fun addItem(item: DummyItem) {
