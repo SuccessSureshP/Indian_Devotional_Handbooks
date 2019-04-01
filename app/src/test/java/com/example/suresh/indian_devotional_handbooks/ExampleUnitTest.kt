@@ -1,4 +1,4 @@
-package com.example.suresh.master_detail_flow_sample
+package com.example.suresh.indian_devotional_handbooks
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.suresh.master_detail_flow_sample
+package com.example.suresh.indian_devotional_handbooks
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.example.suresh.master_detail_flow_sample", appContext.packageName)
+        assertEquals("com.example.suresh.indian_devotional_handbooks", appContext.packageName)
     }
 }

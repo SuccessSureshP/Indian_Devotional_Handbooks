@@ -1,4 +1,4 @@
-package com.example.suresh.master_detail_flow_sample
+package com.example.suresh.indian_devotional_handbooks
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-import com.example.suresh.master_detail_flow_sample.data.DevotionalContent
-import kotlinx.android.synthetic.main.activity_website_list.*
+import com.example.suresh.indian_devotional_handbooks.data.DevotionalContent
+import kotlinx.android.synthetic.main.activity_devotional_handbook_list.*
 import kotlinx.android.synthetic.main.website_list_content.view.*
 import kotlinx.android.synthetic.main.website_list.*
 
@@ -33,7 +33,7 @@ class DevotionalHandBooksListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_website_list)
+        setContentView(R.layout.activity_devotional_handbook_list)
 
         setSupportActionBar(toolbar)
         toolbar.title = title

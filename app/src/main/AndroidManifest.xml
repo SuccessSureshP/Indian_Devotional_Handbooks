@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.suresh.master_detail_flow_sample">
+    package="com.example.suresh.indian_devotional_handbooks">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DevotionalHandBooksListActivity"
+            android:name="com.example.suresh.indian_devotional_handbooks.DevotionalHandBooksListActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,13 +20,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DevotionalHandBookDetailActivity"
+            android:name="com.example.suresh.indian_devotional_handbooks.DevotionalHandBookDetailActivity"
             android:label="@string/title_website_detail"
-            android:parentActivityName=".DevotionalHandBooksListActivity"
+            android:parentActivityName="com.example.suresh.indian_devotional_handbooks.DevotionalHandBooksListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.suresh.master_detail_flow_sample.DevotionalHandBooksListActivity" />
+                android:value="com.example.suresh.indian_devotional_handbooks.DevotionalHandBooksListActivity" />
         </activity>
     </application>
 

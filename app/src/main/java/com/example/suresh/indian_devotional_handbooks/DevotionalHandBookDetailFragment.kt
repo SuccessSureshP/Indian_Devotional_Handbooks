@@ -1,4 +1,4 @@
-package com.example.suresh.master_detail_flow_sample
+package com.example.suresh.indian_devotional_handbooks
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -6,9 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.suresh.master_detail_flow_sample.data.DevotionalContent
-import kotlinx.android.synthetic.main.activity_website_detail.*
-import kotlinx.android.synthetic.main.website_detail.view.*
+import com.example.suresh.indian_devotional_handbooks.data.DevotionalContent
+import kotlinx.android.synthetic.main.activity_devotional_handbook_detail.*
+import kotlinx.android.synthetic.main.fragment_devotional_handbook_detail.view.*
 
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener
@@ -59,7 +59,7 @@ OnPageErrorListener  {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val rootView = inflater.inflate(R.layout.website_detail, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_devotional_handbook_detail, container, false)
 
         rootView.pdfView.fromAsset(item?.bookFileName)
             .defaultPage(pageNumber)

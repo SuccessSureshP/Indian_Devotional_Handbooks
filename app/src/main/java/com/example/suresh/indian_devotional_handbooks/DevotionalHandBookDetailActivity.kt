@@ -1,11 +1,11 @@
-package com.example.suresh.master_detail_flow_sample
+package com.example.suresh.indian_devotional_handbooks
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.app.NavUtils
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_website_detail.*
+import kotlinx.android.synthetic.main.activity_devotional_handbook_detail.*
 
 /**
  * An activity representing a single Website detail screen. This
@@ -17,7 +17,7 @@ class DevotionalHandBookDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_website_detail)
+        setContentView(R.layout.activity_devotional_handbook_detail)
         setSupportActionBar(detail_toolbar)
         app_bar.setExpanded(false,true)
 
@@ -44,7 +44,7 @@ class DevotionalHandBookDetailActivity : AppCompatActivity() {
             }
 
             supportFragmentManager.beginTransaction()
-                    .add(R.id.website_detail_container, fragment)
+                    .add(R.id.devotional_handbook_container, fragment)
                     .commit()
         }
     }

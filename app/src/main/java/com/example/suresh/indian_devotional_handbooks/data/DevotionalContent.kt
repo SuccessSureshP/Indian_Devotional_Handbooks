@@ -1,4 +1,4 @@
-package com.example.suresh.master_detail_flow_sample.data
+package com.example.suresh.indian_devotional_handbooks.data
 
 import java.util.ArrayList
 import java.util.HashMap
