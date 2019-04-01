@@ -12,8 +12,8 @@ import android.widget.TextView
 
 import com.example.suresh.indian_devotional_handbooks.data.DevotionalContent
 import kotlinx.android.synthetic.main.activity_devotional_handbook_list.*
-import kotlinx.android.synthetic.main.website_list_content.view.*
-import kotlinx.android.synthetic.main.website_list.*
+import kotlinx.android.synthetic.main.handbook_list_content.view.*
+import kotlinx.android.synthetic.main.handbooks_list.*
 
 /**
  * An activity representing a list of Pings. This activity
@@ -89,7 +89,7 @@ class DevotionalHandBooksListActivity : AppCompatActivity() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.website_list_content, parent, false)
+                    .inflate(R.layout.handbook_list_content, parent, false)
             return ViewHolder(view)
         }
 
