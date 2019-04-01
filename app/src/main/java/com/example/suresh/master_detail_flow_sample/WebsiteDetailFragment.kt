@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.suresh.master_detail_flow_sample.dummy.DummyContent
+import com.example.suresh.master_detail_flow_sample.data.DevotionalContent
 import kotlinx.android.synthetic.main.activity_website_detail.*
 import kotlinx.android.synthetic.main.website_detail.view.*
 
@@ -41,22 +41,18 @@ OnPageErrorListener  {
 
     internal var pageNumber: Int = 0
 
-    /**
-     * The dummy content this fragment is presenting.
-     */
-    val SAMPLE_FILE = "Adhyatmika_Darshini.pdf"
-    private var item: DummyContent.DummyItem? = null
+    private var item: DevotionalContent.HandBookItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
             if (it.containsKey(ARG_ITEM_ID)) {
-                // Load the dummy content specified by the fragment
+                // Load the bookTitle specified by the fragment
                 // arguments. In a real-world scenario, use a Loader
-                // to load content from a content provider.
-                item = DummyContent.ITEM_MAP[it.getString(ARG_ITEM_ID)]
-                activity?.toolbar_layout?.title = item?.content
+                // to load bookTitle from a bookTitle provider.
+                item = DevotionalContent.ITEM_MAP[it.getString(ARG_ITEM_ID)]
+                activity?.toolbar_layout?.title = item?.bookTitle
             }
         }
     }
@@ -65,12 +61,7 @@ OnPageErrorListener  {
                               savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.website_detail, container, false)
 
-        // Show the dummy content as text in a TextView.
-//        item?.let {
-//            rootView.website_detail.text = it.details
-//        }
-
-        rootView.pdfView.fromAsset(item?.details)
+        rootView.pdfView.fromAsset(item?.bookFileName)
             .defaultPage(pageNumber)
             .onPageChange(this)
             .enableAnnotationRendering(true)

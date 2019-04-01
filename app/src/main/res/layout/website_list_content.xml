@@ -22,7 +22,7 @@
         tools:text="235 Park Ave South, New York, NY, USA,235 Park Ave South, New York, NY, USA"/>
 
     <!--<TextView
-        android:id="@+id/content"
+        android:id="@+id/bookTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"

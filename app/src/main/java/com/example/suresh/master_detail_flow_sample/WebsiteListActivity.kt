@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-import com.example.suresh.master_detail_flow_sample.dummy.DummyContent
+import com.example.suresh.master_detail_flow_sample.data.DevotionalContent
 import kotlinx.android.synthetic.main.activity_website_list.*
 import kotlinx.android.synthetic.main.website_list_content.view.*
 import kotlinx.android.synthetic.main.website_list.*
@@ -20,8 +20,8 @@ import kotlinx.android.synthetic.main.website_list.*
  * has different presentations for handset and tablet-size devices. On
  * handsets, the activity presents a list of items, which when touched,
  * lead to a [WebsiteDetailActivity] representing
- * item details. On tablets, the activity presents the list of items and
- * item details side-by-side using two vertical panes.
+ * item bookFileName. On tablets, the activity presents the list of items and
+ * item bookFileName side-by-side using two vertical panes.
  */
 class WebsiteListActivity : AppCompatActivity() {
 
@@ -55,11 +55,11 @@ class WebsiteListActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
-        recyclerView.adapter = SimpleItemRecyclerViewAdapter(this, DummyContent.ITEMS, twoPane)
+        recyclerView.adapter = SimpleItemRecyclerViewAdapter(this, DevotionalContent.ITEMS, twoPane)
     }
 
     class SimpleItemRecyclerViewAdapter(private val parentActivity: WebsiteListActivity,
-                                        private val values: List<DummyContent.DummyItem>,
+                                        private val values: List<DevotionalContent.HandBookItem>,
                                         private val twoPane: Boolean) :
             RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder>() {
 
@@ -67,7 +67,7 @@ class WebsiteListActivity : AppCompatActivity() {
 
         init {
             onClickListener = View.OnClickListener { v ->
-                val item = v.tag as DummyContent.DummyItem
+                val item = v.tag as DevotionalContent.HandBookItem
                 if (twoPane) {
                     val fragment = WebsiteDetailFragment().apply {
                         arguments = Bundle().apply {
@@ -96,7 +96,7 @@ class WebsiteListActivity : AppCompatActivity() {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = values[position]
             holder.idView.text = item.id
-            holder.contentView.text = item.content
+            holder.contentView.text = item.bookTitle
 
             with(holder.itemView) {
                 tag = item
