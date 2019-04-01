@@ -39,8 +39,15 @@ class DevotionalHandBooksListActivity : AppCompatActivity() {
         toolbar.title = title
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            if (twoPane) {
+                this.supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.website_detail_container, AboutPageFragment())
+                    .commit()
+            } else {
+                val intent = Intent(view.context, AboutPageActivity::class.java)
+                view.context.startActivity(intent)
+            }
         }
 
         if (website_detail_container != null) {

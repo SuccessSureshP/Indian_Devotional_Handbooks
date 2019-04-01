@@ -28,6 +28,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.suresh.indian_devotional_handbooks.DevotionalHandBooksListActivity" />
         </activity>
+        <activity
+            android:name="com.example.suresh.indian_devotional_handbooks.AboutPageActivity"
+            android:label="@string/title_about_page"
+            android:parentActivityName="com.example.suresh.indian_devotional_handbooks.AboutPageActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.suresh.indian_devotional_handbooks.DevotionalHandBooksListActivity" />
+        </activity>
     </application>
 
 </manifest>

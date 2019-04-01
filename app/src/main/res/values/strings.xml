@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Indian Devotional Handbooks</string>
     <string name="title_website_detail">Devotional Handbook Detail</string>
+    <string name="title_about_page">About</string>
 </resources>
