@@ -9,7 +9,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="24dp"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"/>
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -17,8 +20,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/content"
         android:padding="16dp"
-        android:textSize="16dp"
+        android:textSize="24dp"
         android:layout_margin="16dp"
+        android:layout_marginLeft="@dimen/item_width"
+        android:textColor="@color/colorPrimary"
         tools:text="235 Park Ave South, New York, NY, USA,235 Park Ave South, New York, NY, USA"/>
 
     <!--<TextView
