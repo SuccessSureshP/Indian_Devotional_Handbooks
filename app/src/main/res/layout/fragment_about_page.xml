@@ -4,5 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:textSize="40dp"
-    android:text="About page content here"/>
+    android:textSize="20dp"
+    android:scrollbars="vertical"
+    android:text="In spite of today's fast life and modern culture, people improving their interest in the Indian culture and the devotional information. Sri Pokkuluri Surya Prasad who is a retired teacher has taken the initiative to give guidance and spiritual awareness to such people with a series of small handbooks. He read many spiritual books and travelled around the country (India) to visit many holy places. He has collected and summarized the sacred information in small handbooks which are distributed to many people. His aim is to impart the devotional knowledge to every person. This app help to distribute these handbooks to many more people. "/>
