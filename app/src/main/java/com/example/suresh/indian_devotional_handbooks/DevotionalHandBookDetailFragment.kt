@@ -41,6 +41,8 @@ OnPageErrorListener  {
 
     internal var pageNumber: Int = 0
 
+    private var twoPane = false
+
     private var item: DevotionalContent.HandBookItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +54,7 @@ OnPageErrorListener  {
                 // arguments. In a real-world scenario, use a Loader
                 // to load bookTitle from a bookTitle provider.
                 item = DevotionalContent.ITEM_MAP[it.getString(ARG_ITEM_ID)]
+                twoPane = it.getBoolean(ARG_TWO_PANE)
                 activity?.toolbar_layout?.title = item?.bookTitle
             }
         }
@@ -61,7 +64,9 @@ OnPageErrorListener  {
                               savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_devotional_handbook_detail, container, false)
 
-        rootView.pdfView.fromAsset(item?.bookFileName)
+        var fileName = if(twoPane) item?.twoSidesBookFileName else item?.oneSideBookFileName
+
+        rootView.pdfView.fromAsset(fileName)
             .defaultPage(pageNumber)
             .onPageChange(this)
             .enableAnnotationRendering(true)
@@ -79,5 +84,6 @@ OnPageErrorListener  {
          * represents.
          */
         const val ARG_ITEM_ID = "item_id"
+        const val ARG_TWO_PANE = "two_pane"
     }
 }

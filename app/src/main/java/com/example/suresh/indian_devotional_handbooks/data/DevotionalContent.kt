@@ -11,13 +11,12 @@ object DevotionalContent {
 
 
     init {
-        addItem(HandBookItem("1","Adhyatmika_Darshini","Adhyatmika_Darshini.pdf"))
-        addItem(HandBookItem("2","Adhyatmika_Darshini-2","Adhyatmika_Darshini-2.pdf"))
+        addItem(HandBookItem("1","Adhyatmika_Darshini","Adhyatmika_Darshini_Two_side_view.pdf", "Adhyatmika_Darshini_One_side_view.pdf"))
+        addItem(HandBookItem("2","Adhyatmika_Darshini-2","Adhyatmika_Darshini-2_Two_side_view.pdf", "Adhyatmika_Darshini-2_Two_side_view.pdf"))
 
-        addItem(HandBookItem("3","Adhyatmika_Darshini-3","Adhyatmika_Darshini.pdf"))
+        addItem(HandBookItem("3","Adhyatmika_Darshini-3","Adhyatmika_Darshini_Two_side_view.pdf", "Adhyatmika_Darshini_One_side_view.pdf"))
 
-        addItem(HandBookItem("4","Adhyatmika_Darshini-4","Adhyatmika_Darshini-2.pdf"))
-
+        addItem(HandBookItem("4","Adhyatmika_Darshini-4","Adhyatmika_Darshini-2_Two_side_view.pdf", "Adhyatmika_Darshini-2_Two_side_view.pdf"))
     }
 
     private fun addItem(item: HandBookItem) {
@@ -25,16 +24,7 @@ object DevotionalContent {
         ITEM_MAP.put(item.id, item)
     }
 
-    private fun makeDetails(position: Int): String {
-        val builder = StringBuilder()
-        builder.append("Details about Item: ").append(position)
-        for (i in 0..position - 1) {
-            builder.append("\nMore bookFileName information here.")
-        }
-        return builder.toString()
-    }
-
-    data class HandBookItem(val id: String, val bookTitle: String, val bookFileName: String) {
+    data class HandBookItem(val id: String, val bookTitle: String, val twoSidesBookFileName: String, val oneSideBookFileName: String) {
         override fun toString(): String = bookTitle
     }
 }

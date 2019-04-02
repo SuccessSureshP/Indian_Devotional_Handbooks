@@ -20,8 +20,8 @@ import kotlinx.android.synthetic.main.handbooks_list.*
  * has different presentations for handset and tablet-size devices. On
  * handsets, the activity presents a list of items, which when touched,
  * lead to a [DevotionalHandBookDetailActivity] representing
- * item bookFileName. On tablets, the activity presents the list of items and
- * item bookFileName side-by-side using two vertical panes.
+ * item twoSidesBookFileName. On tablets, the activity presents the list of items and
+ * item twoSidesBookFileName side-by-side using two vertical panes.
  */
 class DevotionalHandBooksListActivity : AppCompatActivity() {
 
@@ -79,6 +79,7 @@ class DevotionalHandBooksListActivity : AppCompatActivity() {
                     val fragment = DevotionalHandBookDetailFragment().apply {
                         arguments = Bundle().apply {
                             putString(DevotionalHandBookDetailFragment.ARG_ITEM_ID, item.id)
+                            putBoolean(DevotionalHandBookDetailFragment.ARG_TWO_PANE, twoPane)
                         }
                     }
                     parentActivity.supportFragmentManager
