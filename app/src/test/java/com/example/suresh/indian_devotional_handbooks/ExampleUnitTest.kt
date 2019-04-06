@@ -1,4 +1,4 @@
-package com.example.suresh.indian_devotional_handbooks
+package com.apps.suresh.indian_devotional_handbooks
 
 import org.junit.Test
 
