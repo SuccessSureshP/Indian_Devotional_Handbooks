@@ -60,12 +60,25 @@ OnPageErrorListener  {
         }
     }
 
+    //@SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_devotional_handbook_detail, container, false)
 
         var fileName = if(twoPane) item?.twoSidesBookFileName else item?.oneSideBookFileName
 
+
+        //rootView.pdfWebView.settings.javaScriptEnabled = true
+        //rootView.pdfWebView.settings.pluginState = WebSettings.PluginState.ON
+
+        //rootView.pdfWebView.loadUrl ("https://www.theringer.com/nfl/2019/4/3/18293446/arizona-cardinals-revolutionize-nfl-draft-josh-rosen-kyler-murray")
+
+        //rootView.pdfWebView.loadUrl ("https://www.slideshare.net/sureshpokkuluri/adhyatmika-darshini-onesideview")
+        //rootView.pdfWebView.loadUrl ("https://www.slideshare.net/sureshpokkuluri/adhyatmika-darshini-twosideview")
+        //rootView.pdfWebView.loadUrl ("https://unsplash.com/")
+
+
+        //rootView.pdfView.fromUri(Uri.parse ("http://www.africau.edu/images/default/sample.pdf"))
         rootView.pdfView.fromAsset(fileName)
             .defaultPage(pageNumber)
             .onPageChange(this)

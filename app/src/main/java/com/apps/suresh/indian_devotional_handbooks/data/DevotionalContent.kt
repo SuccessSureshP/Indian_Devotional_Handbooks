@@ -11,12 +11,12 @@ object DevotionalContent {
 
 
     init {
-        addItem(HandBookItem("1","అధ్మాత్మిక దర్శిని","Adhyatmika_Darshini_Two_side_view.pdf", "Adhyatmika_Darshini_Two_side_view.pdf"))
-        addItem(HandBookItem("2","అధ్మాత్మిక దర్శిని-2","Adhyatmika_Darshini-2_Two_side_view.pdf", "Adhyatmika_Darshini-2_Two_side_view.pdf"))
+        addItem(HandBookItem("1","అధ్మాత్మిక దర్శిని","Adhyatmika_Darshini_Two_side_view.pdf", "Adhyatmika_Darshini_One_side_view.pdf"))
+        addItem(HandBookItem("2","అధ్మాత్మిక దర్శిని-2","Adhyatmika_Darshini_2_Two_side_view.pdf", "Adhyatmika_Darshini_2_One_side_view.pdf"))
 
-        addItem(HandBookItem("3","Adhyatmika_Darshini-3","Adhyatmika_Darshini_Two_side_view.pdf", "Adhyatmika_Darshini_One_side_view.pdf"))
+        //addItem(HandBookItem("3","Adhyatmika_Darshini-3","Adhyatmika_Darshini_One_side_view.pdf", "Adhyatmika_Darshini_One_side_view.pdf"))
 
-        addItem(HandBookItem("4","Adhyatmika_Darshini-4","Adhyatmika_Darshini-2_Two_side_view.pdf", "Adhyatmika_Darshini-2_Two_side_view.pdf"))
+        //addItem(HandBookItem("4","Adhyatmika_Darshini-4","Adhyatmika_Darshini-2_Two_side_view.pdf", "Adhyatmika_Darshini-2_Two_side_view.pdf"))
     }
 
     private fun addItem(item: HandBookItem) {
